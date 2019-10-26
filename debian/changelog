@@ -4,6 +4,7 @@ nvidia-graphics-drivers-tesla-450 (450.51.05-1) UNRELEASED; urgency=medium
 
   [ Andreas Beckmann ]
   * Fork as new source package, rename everything to include '-tesla-450'.
+  * Do not build 'unversioned' packages from this source.
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 17 Jul 2020 16:45:37 +0200
 
