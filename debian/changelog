@@ -4,6 +4,7 @@ nvidia-graphics-drivers-tesla-440 (440.64.00-1) UNRELEASED; urgency=medium
 
   [ Andreas Beckmann ]
   * Fork as new source package, rename everything to include '-tesla-440'.
+  * Do not build 'unversioned' packages from this source.
   * Update lintian overrides.
 
  -- Andreas Beckmann <anbe@debian.org>  Wed, 18 Mar 2020 21:23:31 +0100
