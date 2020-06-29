@@ -1,4 +1,4 @@
-nvidia-graphics-drivers (440.95.01-1~git) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-440 (440.95.01-1) unstable; urgency=medium
 
   * New upstream Tesla release 440.95.01 (2020-06-24).
     * Fixed CVE-2020-5963, CVE-2020-5967.  (Closes: #963766)
@@ -18,7 +18,7 @@ nvidia-graphics-drivers (440.95.01-1~git) UNRELEASED; urgency=medium
   * Refresh patches.
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 29 Jun 2020 21:42:12 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 29 Jun 2020 23:14:48 +0200
 
 nvidia-graphics-drivers (440.82-2) unstable; urgency=medium
 
