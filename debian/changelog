@@ -1,6 +1,9 @@
-nvidia-graphics-drivers (450.51.05-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.51.05-1) UNRELEASED; urgency=medium
 
   * New upstream Tesla release 450.51.05 (2020-07-07).
+
+  [ Andreas Beckmann ]
+  * Fork as new source package, rename everything to include '-tesla-450'.
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 17 Jul 2020 16:45:37 +0200
 
