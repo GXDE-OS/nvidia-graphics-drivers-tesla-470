@@ -9,6 +9,7 @@ nvidia-graphics-drivers-tesla-450 (450.51.06-1) UNRELEASED; urgency=medium
     - Generate alternative versioned dependency on libnvidia-cfg.so.1 through
       the symbols file.
   * There is no libnvidia-compiler on arm64 (450.57-3).
+  * Update lintian overrides.
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 18 Aug 2020 22:18:23 +0200
 
