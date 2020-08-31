@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-450 (450.51.06-2) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.51.06-2) unstable; urgency=medium
 
   [ Andreas Beckmann ]
   * Test that the patches can be applied to the module source (450.66-1).
@@ -11,7 +11,7 @@ nvidia-graphics-drivers-tesla-450 (450.51.06-2) UNRELEASED; urgency=medium
   [ Vincent Cheng ]
   * Remove myself from Uploaders.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 31 Aug 2020 23:50:47 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 01 Sep 2020 00:39:37 +0200
 
 nvidia-graphics-drivers-tesla-450 (450.51.06-1) unstable; urgency=medium
 
