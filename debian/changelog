@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-440 (440.95.01-2) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-440 (440.95.01-2) unstable; urgency=medium
 
   [ Andreas Beckmann ]
   * Replace *-i386 helper packages with *:i386 recommendations (440.100-2).
@@ -17,7 +17,7 @@ nvidia-graphics-drivers-tesla-440 (440.95.01-2) UNRELEASED; urgency=medium
   [ Vincent Cheng ]
   * Remove myself from Uploaders.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 17 Jul 2020 21:00:36 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 01 Sep 2020 00:44:13 +0200
 
 nvidia-graphics-drivers-tesla-440 (440.95.01-1) unstable; urgency=medium
 
