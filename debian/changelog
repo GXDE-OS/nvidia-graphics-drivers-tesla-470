@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-440 (440.118.02-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-440 (440.118.02-1) unstable; urgency=medium
 
   * New upstream Tesla release 440.118.02 (2020-09-30).
     - Fixed a bug that could cause the X server to crash when using large
@@ -17,7 +17,7 @@ nvidia-graphics-drivers-tesla-440 (440.118.02-1) UNRELEASED; urgency=medium
   * Refresh patches.
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Tue, 13 Oct 2020 00:01:20 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 28 Oct 2020 21:46:41 +0100
 
 nvidia-graphics-drivers (440.100-2) unstable; urgency=medium
 
