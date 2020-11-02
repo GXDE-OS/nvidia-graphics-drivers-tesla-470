@@ -1,8 +1,8 @@
-nvidia-graphics-drivers-tesla-450 (450.80.02-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.80.02-1) unstable; urgency=medium
 
   * Rebuild as Tesla 450 driver.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 02 Nov 2020 02:15:43 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 02 Nov 2020 10:20:10 +0100
 
 nvidia-graphics-drivers (450.80.02-1) unstable; urgency=medium
 
