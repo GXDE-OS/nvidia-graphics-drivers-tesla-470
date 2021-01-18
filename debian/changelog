@@ -1,8 +1,8 @@
-nvidia-graphics-drivers-tesla-460 (460.32.03-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.32.03-1) unstable; urgency=medium
 
   * Rebuild as Tesla 460 driver.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 18 Jan 2021 12:05:00 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 18 Jan 2021 03:51:26 +0100
 
 nvidia-graphics-drivers (460.32.03-1) unstable; urgency=medium
 
