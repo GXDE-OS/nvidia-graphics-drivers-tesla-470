@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-450 (450.102.04-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.102.04-1) unstable; urgency=medium
 
   * New upstream long lived branch release 450.102.04 (2021-01-07).
     * Fixed CVE-2021-1052, CVE-2021-1053, CVE-2021-1056.  (Closes: #979675)
@@ -26,7 +26,7 @@ nvidia-graphics-drivers-tesla-450 (450.102.04-1) UNRELEASED; urgency=medium
   * Update nv-readme.ids.
   * Refresh patches.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 11 Jan 2021 17:23:13 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 25 Jan 2021 18:21:19 +0100
 
 nvidia-graphics-drivers-tesla-450 (450.80.02-2) unstable; urgency=medium
 
