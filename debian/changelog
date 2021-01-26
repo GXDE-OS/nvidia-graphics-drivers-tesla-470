@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-460 (460.32.03-2) unstable; urgency=medium
+
+  * Rebuild as Tesla 460 driver.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 26 Jan 2021 11:51:14 +0100
+
 nvidia-graphics-drivers (460.32.03-2) unstable; urgency=medium
 
   * nvidia-detect: Add support for Tesla 460 drivers.
@@ -8,7 +14,8 @@ nvidia-graphics-drivers (460.32.03-2) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-460 (460.32.03-1) unstable; urgency=medium
 
-  * Rebuild as Tesla 460 driver.
+  * Fork as new source package, rename everything to include '-tesla-460'.
+  * Do not build 'unversioned' packages from this source.
 
  -- Andreas Beckmann <anbe@debian.org>  Mon, 18 Jan 2021 03:51:26 +0100
 
