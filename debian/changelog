@@ -1,4 +1,4 @@
-nvidia-graphics-drivers (460.73.01-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.73.01-1) unstable; urgency=medium
 
   * New upstream production branch release 460.73.01 (2021-04-14).
     * Fixed CVE-2021-1076, CVE-2021-1077.  (Closes: #987222)
@@ -9,7 +9,7 @@ nvidia-graphics-drivers (460.73.01-1) UNRELEASED; urgency=medium
   [ Andreas Beckmann ]
   * Update nv-readme.ids.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 23 Apr 2021 10:40:20 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 23 Apr 2021 15:20:03 +0200
 
 nvidia-graphics-drivers (460.73.01-1) unstable; urgency=medium
 
