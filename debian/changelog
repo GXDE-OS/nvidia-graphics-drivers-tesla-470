@@ -545,7 +545,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.211.00-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.211.00-1) unstable; urgency=medium
 
   * New upstream Tesla release 418.211.00 (2021-07-20).
     * Fixed CVE-2021-1093, CVE-2021-1094, CVE-2021-1095.  (Closes: #991354)
@@ -580,7 +580,7 @@ nvidia-graphics-drivers (418.211.00-1) buster; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Wed, 21 Jul 2021 22:06:09 +0200
 
-nvidia-graphics-drivers (418.197.02-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.197.02-1) unstable; urgency=medium
 
   * New upstream Tesla release 418.197.02 (2021-04-19).
     * Fixed CVE-2021-1076.  (Closes: #987219)
