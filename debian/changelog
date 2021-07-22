@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-440 (440.118.02-5) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-440 (440.118.02-5) unstable; urgency=medium
 
   * nvidia-tesla-440-driver-libs: Add Recommends: libnvidia-tesla-440-encode1
     (470.42.01-1).  (Closes: #989885)
