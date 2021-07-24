@@ -1,3 +1,21 @@
+nvidia-graphics-drivers-tesla-460 (460.91.03-1) unstable; urgency=medium
+
+  * New upstream production branch release 460.91.03 (2021-07-20).
+    * Fixed CVE-2021-1093, CVE-2021-1094, CVE-2021-1095.  (Closes: #991357)
+      https://nvidia.custhelp.com/app/answers/detail/a_id/5211
+    - Added support for the following GPUs: GeForce RTX 3070 Ti, CMP 50HX.
+    * Fixed crash with certain DisplayPort devices.  (Closes: #989069)
+
+  [ Andreas Beckmann ]
+  * Update nv-readme.ids.
+  * Drop manually added Depends: libcuda1 from libraries not referencing it.
+  * nvidia-tesla-460-driver-libs: Add Recommends: libnvidia-tesla-460-encode1.
+    (Closes: #989885)
+  * debian/gen-control.pl: Support substitutions in the Vcs-Git field.
+  * Compute and substitute the Git branch instead of hardcoding it.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 25 Jul 2021 01:58:49 +0200
+
 nvidia-graphics-drivers (460.91.03-1) unstable; urgency=medium
 
   * New upstream production branch release 460.91.03 (2021-07-20).
