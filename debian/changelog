@@ -1,3 +1,11 @@
+nvidia-graphics-drivers-tesla-470 (470.57.02-1) unstable; urgency=medium
+
+  * Fork as new source package, rename everything to include '-tesla-470'.
+  * Do not build 'unversioned' packages from this source.
+  * Upload to unstable.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 26 Jul 2021 01:26:05 +0200
+
 nvidia-graphics-drivers (470.57.02-1) experimental; urgency=medium
 
   * New upstream production branch release 470.57.02 (2021-07-19).
