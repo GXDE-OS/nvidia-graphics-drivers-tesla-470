@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.57.02-2) unstable; urgency=medium
+
+  * Rebuild as Tesla 470 driver.
+
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 22 Sep 2021 13:21:09 +0200
+
 nvidia-graphics-drivers (470.57.02-3) unstable; urgency=medium
 
   * Backport drm_device_has_pdev and set_current_state changes from 470.63.01
