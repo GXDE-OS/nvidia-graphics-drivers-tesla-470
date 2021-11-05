@@ -900,19 +900,19 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-1) unstable; urgency=medium
 
   * New upstream Tesla release 418.226.00 (2021-10-26).
 
   [ Andreas Beckmann ]
   * bug-script: Show the nvidia and glx alternatives (470.82.00-1).
-  * nvidia-alternative: libnvidia-cfg.so.1 on its own is not
+  * nvidia-tesla-418-alternative: libnvidia-cfg.so.1 on its own is not
     sufficient to activate a nvidia alternative (470.82.00-1).
   * Fix bashisms in upstream scripts (470.82.00-1).
   * libegl1-mesa is a transitional package since buster (470.82.00-1).
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 29 Oct 2021 15:58:47 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 05 Nov 2021 10:57:00 +0100
 
 nvidia-graphics-drivers-tesla-418 (418.211.00-2) unstable; urgency=medium
 
