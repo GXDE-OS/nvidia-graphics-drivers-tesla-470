@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-460 (460.106.00-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.106.00-1) unstable; urgency=medium
 
   * New upstream Tesla release 460.106.00 (2021-10-26).
 
@@ -13,7 +13,7 @@ nvidia-graphics-drivers-tesla-460 (460.106.00-1) UNRELEASED; urgency=medium
     (470.82.00-1).
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 01 Nov 2021 11:23:02 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 08 Nov 2021 14:43:35 +0100
 
 nvidia-graphics-drivers-tesla-460 (460.91.03-2) unstable; urgency=medium
 
