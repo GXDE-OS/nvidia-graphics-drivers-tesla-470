@@ -300,22 +300,22 @@ nvidia-graphics-drivers (465.24.02-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Apr 2021 18:48:53 +0200
 
-nvidia-graphics-drivers (460.106.00-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.106.00-1) unstable; urgency=medium
 
   * New upstream Tesla release 460.106.00 (2021-10-26).
 
   [ Andreas Beckmann ]
   * bug-script: Show the nvidia and glx alternatives (470.82.00-1).
-  * nvidia-alternative: libnvidia-cfg.so.1 on its own is not
+  * nvidia-tesla-460-alternative: libnvidia-cfg.so.1 on its own is not
     sufficient to activate a nvidia alternative (470.82.00-1).
   * Fix bashisms in upstream scripts (470.82.00-1).
-  * Drop the unusable leftover non-GLVND libegl1-nvidia package
+  * Drop the unusable leftover non-GLVND libegl1-nvidia-tesla-460 package
     (470.82.00-1).
-  * nvidia-alternative: Drop unused non-GLVND slave links
+  * nvidia-tesla-460-alternative: Drop unused non-GLVND slave links
     (470.82.00-1).
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 01 Nov 2021 11:23:02 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 08 Nov 2021 14:43:35 +0100
 
 nvidia-graphics-drivers-tesla-460 (460.91.03-2) unstable; urgency=medium
 
@@ -710,7 +710,7 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.156.00-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.156.00-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.156.00 (2021-10-26).
     - Fixed a bug that could cause the /proc/driver/nvidia/suspend power
@@ -720,16 +720,16 @@ nvidia-graphics-drivers (450.156.00-1) UNRELEASED; urgency=medium
 
   [ Andreas Beckmann ]
   * bug-script: Show the nvidia and glx alternatives (470.82.00-1).
-  * nvidia-alternative: libnvidia-cfg.so.1 on its own is not
+  * nvidia-tesla-450-alternative: libnvidia-cfg.so.1 on its own is not
     sufficient to activate a nvidia alternative (470.82.00-1).
   * Fix bashisms in upstream scripts (470.82.00-1).
-  * Drop the unusable leftover non-GLVND libegl1-nvidia package
+  * Drop the unusable leftover non-GLVND libegl1-nvidia-tesla-450 package
     (470.82.00-1).
-  * nvidia-alternative: Drop unused non-GLVND slave links
+  * nvidia-tesla-450-alternative: Drop unused non-GLVND slave links
     (470.82.00-1).
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Sat, 30 Oct 2021 11:01:36 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 05 Nov 2021 12:11:07 +0100
 
 nvidia-graphics-drivers-tesla-450 (450.142.00-2) unstable; urgency=medium
 
@@ -1612,19 +1612,19 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-1) unstable; urgency=medium
 
   * New upstream Tesla release 418.226.00 (2021-10-26).
 
   [ Andreas Beckmann ]
   * bug-script: Show the nvidia and glx alternatives (470.82.00-1).
-  * nvidia-alternative: libnvidia-cfg.so.1 on its own is not
+  * nvidia-tesla-418-alternative: libnvidia-cfg.so.1 on its own is not
     sufficient to activate a nvidia alternative (470.82.00-1).
   * Fix bashisms in upstream scripts (470.82.00-1).
   * libegl1-mesa is a transitional package since buster (470.82.00-1).
   * Update lintian overrides.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 29 Oct 2021 15:58:47 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 05 Nov 2021 10:57:00 +0100
 
 nvidia-graphics-drivers-tesla-418 (418.211.00-2) unstable; urgency=medium
 
