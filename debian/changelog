@@ -11,9 +11,9 @@ nvidia-graphics-drivers-tesla-450 (450.156.00-1) unstable; urgency=medium
   * nvidia-tesla-450-alternative: libnvidia-cfg.so.1 on its own is not
     sufficient to activate a nvidia alternative (470.82.00-1).
   * Fix bashisms in upstream scripts (470.82.00-1).
-  * Drop the unusable leftover non-GLVND libegl1-nvidia package
+  * Drop the unusable leftover non-GLVND libegl1-nvidia-tesla-450 package
     (470.82.00-1).
-  * nvidia-alternative: Drop unused non-GLVND slave links
+  * nvidia-tesla-450-alternative: Drop unused non-GLVND slave links
     (470.82.00-1).
   * Update lintian overrides.
 
