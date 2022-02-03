@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-450 (450.172.01-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.172.01-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.172.01 (2022-01-31).
     * Fixed CVE‑2022‑21813, CVE‑2022‑21814.  (Closes: #1004851)
@@ -14,7 +14,7 @@ nvidia-graphics-drivers-tesla-450 (450.172.01-1) UNRELEASED; urgency=medium
     module renaming. This is a slave alternative of the nvidia alternative
     (470.86-1).  (Closes: #999670)
 
- -- Andreas Beckmann <anbe@debian.org>  Tue, 01 Feb 2022 22:33:16 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 03 Feb 2022 01:35:04 +0100
 
 nvidia-graphics-drivers-tesla-450 (450.156.00-1) unstable; urgency=medium
 
