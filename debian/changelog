@@ -750,10 +750,10 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.172.01-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.172.01-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.172.01 (2022-01-31).
-    * Fixed CVE‑2022‑21813, CVE‑2022‑21814.
+    * Fixed CVE‑2022‑21813, CVE‑2022‑21814.  (Closes: #1004851)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5312
     - Fixed a bug that caused nvidia-drm.ko to crash when loading with
       DRM-KMS enabled (modeset=1) on Linux v5.14.
@@ -761,8 +761,12 @@ nvidia-graphics-drivers (450.172.01-1) UNRELEASED; urgency=medium
 
   [ Andreas Beckmann ]
   * Refresh patches.
+  * nvidia-tesla-450-kernel-support: Provide
+    /etc/modprobe.d/nvidia-options.conf as a template taking into account the
+    module renaming. This is a slave alternative of the nvidia alternative
+    (470.86-1).  (Closes: #999670)
 
- -- Andreas Beckmann <anbe@debian.org>  Tue, 01 Feb 2022 22:33:16 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 03 Feb 2022 01:35:04 +0100
 
 nvidia-graphics-drivers-tesla-450 (450.156.00-1) unstable; urgency=medium
 
