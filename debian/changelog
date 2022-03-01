@@ -3,7 +3,7 @@ nvidia-graphics-drivers-tesla-460 (460.106.00-2) UNRELEASED; urgency=medium
   * Backport stdarg.h and stddef.h changes from 495.44 to fix kernel module
     build for Linux 5.16.
   * Backport pde_data changes from 510.39.01 to fix kernel module build for
-    Linux 5.17.
+    Linux 5.17.  (Closes: #1005406)
   * nvidia-tesla-460-kernel-support: Provide
     /etc/modprobe.d/nvidia-options.conf as a template taking into account the
     module renaming. This is a slave alternative of the nvidia alternative
@@ -425,21 +425,22 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.172.01-2) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.172.01-2) unstable; urgency=medium
 
   * Backport pde_data changes from 510.39.01 to fix kernel module build for
     Linux 5.17.
   * Add xorg-video-abi-25 (Xorg Xserver 21) as alternative dependency.
+    (Closes: #1005932)
   * dkms.conf: Use a BUILD_EXCLUSIVE equivalent hack to skip build for -rt
     kernels, not supported upstream.
   * Declare Testsuite: autopkgtest-pkg-dkms.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Feb 2022 14:03:05 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 28 Feb 2022 21:03:12 +0100
 
-nvidia-graphics-drivers (450.172.01-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.172.01-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.172.01 (2022-01-31).
-    * Fixed CVE‑2022‑21813, CVE‑2022‑21814.
+    * Fixed CVE‑2022‑21813, CVE‑2022‑21814.  (Closes: #1004851)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5312
     - Fixed a bug that caused nvidia-drm.ko to crash when loading with
       DRM-KMS enabled (modeset=1) on Linux v5.14.
@@ -447,12 +448,12 @@ nvidia-graphics-drivers (450.172.01-1) UNRELEASED; urgency=medium
 
   [ Andreas Beckmann ]
   * Refresh patches.
-  * nvidia-kernel-support: Provide
+  * nvidia-tesla-450-kernel-support: Provide
     /etc/modprobe.d/nvidia-options.conf as a template taking into account the
     module renaming. This is a slave alternative of the nvidia alternative
     (470.86-1).  (Closes: #999670)
 
- -- Andreas Beckmann <anbe@debian.org>  Tue, 01 Feb 2022 22:33:16 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 03 Feb 2022 01:35:04 +0100
 
 nvidia-graphics-drivers-tesla-450 (450.156.00-1) unstable; urgency=medium
 
@@ -1357,18 +1358,18 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-2) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-2) unstable; urgency=medium
 
   * Backport stdarg.h and stddef.h changes from 495.44 to fix kernel module
     build for Linux 5.16.
   * Backport pde_data changes from 510.39.01 to fix kernel module build for
-    Linux 5.17.
-  * nvidia-kernel-support: Provide
+    Linux 5.17.  (Closes: #1005405)
+  * nvidia-tesla-418-kernel-support: Provide
     /etc/modprobe.d/nvidia-options.conf as a template taking into account the
     module renaming. This is a slave alternative of the nvidia alternative
     (470.86-1).  (Closes: #999670)
 
- -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Feb 2022 13:23:58 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Feb 2022 13:48:18 +0100
 
 nvidia-graphics-drivers-tesla-418 (418.226.00-1) unstable; urgency=medium
 
