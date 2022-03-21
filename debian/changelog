@@ -381,9 +381,9 @@ nvidia-graphics-drivers-tesla-460 (460.106.00-2) unstable; urgency=medium
     /etc/modprobe.d/nvidia-options.conf as a template taking into account the
     module renaming. This is a slave alternative of the nvidia alternative
     (470.86-1).  (Closes: #999670)
-  * dkms.conf: Use a BUILD_EXCLUSIVE equivalent hack to skip build for -rt
-    kernels, not supported upstream.
-  * Declare Testsuite: autopkgtest-pkg-dkms.
+  * dkms.conf: Use a BUILD_EXCLUSIVE equivalent hack to skip building for -rt
+    kernels, not supported upstream (510.54-1).
+  * Declare Testsuite: autopkgtest-pkg-dkms (510.54-1).
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 01 Mar 2022 21:31:18 +0100
 
@@ -797,15 +797,21 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
+nvidia-graphics-drivers-tesla-450 (450.172.01-2~deb11u1) bullseye; urgency=medium
+
+  * Rebuild for bullseye.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 20 Mar 2022 16:53:36 +0100
+
 nvidia-graphics-drivers-tesla-450 (450.172.01-2) unstable; urgency=medium
 
   * Add xorg-video-abi-25 (Xorg Xserver 21) as alternative dependency.
     (Closes: #1005932)
   * Backport pde_data changes from 470.103.01 to fix kernel module build for
     Linux 5.17.
-  * dkms.conf: Use a BUILD_EXCLUSIVE equivalent hack to skip build for -rt
-    kernels, not supported upstream.
-  * Declare Testsuite: autopkgtest-pkg-dkms.
+  * dkms.conf: Use a BUILD_EXCLUSIVE equivalent hack to skip building for -rt
+    kernels, not supported upstream (510.54-1).
+  * Declare Testsuite: autopkgtest-pkg-dkms (510.54-1).
 
  -- Andreas Beckmann <anbe@debian.org>  Mon, 28 Feb 2022 21:03:12 +0100
 
