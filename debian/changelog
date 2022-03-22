@@ -1,6 +1,7 @@
 nvidia-graphics-drivers-tesla-470 (470.129.06-6) UNRELEASED; urgency=medium
 
   * Rebuild as Tesla 470 driver.
+  * Build nvidia-cuda-mps from the Tesla driver.
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 02 Jul 2022 23:09:02 +0200
 
