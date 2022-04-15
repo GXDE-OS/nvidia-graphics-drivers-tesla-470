@@ -1,11 +1,11 @@
-nvidia-graphics-drivers-tesla-450 (450.172.01-3) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.172.01-3) unstable; urgency=medium
 
   * Update kernel-5.7.0-set-memory-array.patch to fix kernel module build for
     ppc64el.
   * Backport mt_device_gre changes from 510.39.01 to fix kernel module build
-    for arm64.
+    for arm64.  (Closes: #1009740)
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 15 Apr 2022 20:40:45 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 15 Apr 2022 22:28:22 +0200
 
 nvidia-graphics-drivers-tesla-450 (450.172.01-2~deb11u1) bullseye; urgency=medium
 
