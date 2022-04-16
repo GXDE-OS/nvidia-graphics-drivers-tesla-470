@@ -444,12 +444,12 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.172.01-3) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.172.01-3) unstable; urgency=medium
 
   * Update kernel-5.7.0-set-memory-array.patch to fix kernel module build for
     ppc64el.
   * Backport mt_device_gre changes from 510.39.01 to fix kernel module build
-    for arm64.
+    for arm64.  (Closes: #1009740)
   * Refresh patches.
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 15 Apr 2022 22:28:22 +0200
@@ -1392,6 +1392,25 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
   * Upload to experimental.
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
+
+nvidia-graphics-drivers-tesla-418 (418.226.00-4) unstable; urgency=medium
+
+  * Fix kernel module build for ppc64el.
+
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 14 Apr 2022 16:03:48 +0200
+
+nvidia-graphics-drivers-tesla-418 (418.226.00-3) unstable; urgency=medium
+
+  * The Tesla 418 driver series has been declared as End-of-Life by
+    NVIDIA. No further updates fixing security issues, critical bugs, or
+    adding support for new Xorg or Linux releases will be issued.
+    https://docs.nvidia.com/datacenter/tesla/drivers/
+
+  * dkms.conf: Use a BUILD_EXCLUSIVE equivalent hack to skip building for -rt
+    kernels, not supported upstream (510.54-1).
+  * Declare Testsuite: autopkgtest-pkg-dkms (510.54-1).
+
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 13 Apr 2022 18:44:57 +0200
 
 nvidia-graphics-drivers-tesla-418 (418.226.00-2) unstable; urgency=medium
 
