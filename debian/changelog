@@ -452,10 +452,10 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.191.01-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.191.01-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.191.01 (2022-05-16).
-    * Fixed CVE-2022-28181, CVE-2022-28185, CVE-2022-28192.
+    * Fixed CVE-2022-28181, CVE-2022-28185, CVE-2022-28192. (Closes: #1011144)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5353
 
   [ Andreas Beckmann ]
@@ -1413,7 +1413,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-5) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-5) unstable; urgency=medium
 
   * Backport linker scripts changes from 510.60.02.
   * Refresh patches.
