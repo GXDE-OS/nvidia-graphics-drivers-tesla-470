@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.129.06-3) unstable; urgency=medium
+
+  * Rebuild as Tesla 470 driver.
+
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 26 May 2022 16:13:46 +0200
+
 nvidia-graphics-drivers (470.129.06-3) unstable; urgency=medium
 
   * Do not create backups when patching README.txt.
