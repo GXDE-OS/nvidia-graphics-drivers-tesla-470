@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.129.06-4) unstable; urgency=medium
+
+  * Rebuild as Tesla 470 driver.
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 10 Jun 2022 22:43:41 +0200
+
 nvidia-graphics-drivers (470.129.06-4) unstable; urgency=medium
 
   * Use different virtual packages for firmware file Conflicts and Depends.
