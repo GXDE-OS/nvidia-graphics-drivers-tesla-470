@@ -968,7 +968,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-6) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-6) unstable; urgency=medium
 
   * Backport pci/dma, iosys_map, dma_set_coherent_mask and acpi_bus_get_device
     changes from 470.129.06 to fix kernel module build for Linux 5.18.
