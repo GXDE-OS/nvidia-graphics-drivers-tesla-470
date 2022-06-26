@@ -1,8 +1,8 @@
-nvidia-graphics-drivers-tesla-470 (470.129.06-5) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-470 (470.129.06-5) unstable; urgency=medium
 
   * Temporarily disable autopkgtest on ppc64el.  (Cf. #1012245)
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 24 Jun 2022 15:13:51 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 26 Jun 2022 03:38:36 +0200
 
 nvidia-graphics-drivers (470.129.06-5) unstable; urgency=medium
 
