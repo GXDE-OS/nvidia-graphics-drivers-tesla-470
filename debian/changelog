@@ -1,3 +1,17 @@
+nvidia-graphics-drivers-tesla-470 (470.129.06-6) UNRELEASED; urgency=medium
+
+  * Rebuild as Tesla 470 driver.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sat, 02 Jul 2022 23:09:02 +0200
+
+nvidia-graphics-drivers (470.129.06-6) UNRELEASED; urgency=medium
+
+  * Minor packaging sync and cleanup.
+  * Disable building nvidia-cuda-mps, will be built from
+    src:nvidia-graphics-drivers-tesla-${latest}.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sat, 02 Jul 2022 18:19:13 +0200
+
 nvidia-graphics-drivers-tesla-470 (470.129.06-5) unstable; urgency=medium
 
   * Rebuild as Tesla 470 driver.
