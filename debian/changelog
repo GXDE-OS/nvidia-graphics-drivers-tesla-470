@@ -997,7 +997,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-7) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-7) unstable; urgency=medium
 
   * Backport nv_install_notifier and dma_resv_add_fence changes from
     450.203.03 to fix kernel module build for Linux 5.19.
