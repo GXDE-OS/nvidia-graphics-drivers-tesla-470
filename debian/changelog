@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.141.03-2) unstable; urgency=medium
+
+  * Rebuild as Tesla 470 driver.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Sep 2022 16:37:25 +0200
+
 nvidia-graphics-drivers (470.141.03-2) unstable; urgency=medium
 
   * Add support for unversioned Tesla packages (510.85.02-2).
