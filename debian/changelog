@@ -1013,7 +1013,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-8) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-8) unstable; urgency=medium
 
   * Backport acpi changes from 430.09, 510.85.02 and 515.65.01,
     drm_frambuffer.h changes from 515.76 to fix kernel module build for
