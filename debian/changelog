@@ -5,7 +5,7 @@ nvidia-graphics-drivers-tesla-450 (450.216.04-1) unstable; urgency=medium
       CVE-2022-34679, CVE-2022-34680, CVE-2022-34682, CVE-2022-42254,
       CVE-2022-42256, CVE-2022-42257, CVE-2022-42258, CVE-2022-42259,
       CVE-2022-42260, CVE-2022-42261, CVE-2022-42262, CVE-2022-42263,
-      CVE-2022-42264.
+      CVE-2022-42264.  (Closes: #1025283)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5415
     - Improved performance on GPUs which are experiencing a high number
       of correctable ECC memory errors.
