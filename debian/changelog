@@ -627,7 +627,7 @@ nvidia-graphics-drivers (465.24.02-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Apr 2021 18:48:53 +0200
 
-nvidia-graphics-drivers (460.106.00-9) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.106.00-9) UNRELEASED; urgency=medium
 
   * Backport find_vma_intersection changes from 470.141.03 to fix kernel
     module build for Linux 6.1.
@@ -1131,14 +1131,14 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.216.04-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.216.04-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.203.03 (2022-11-22).
     * Fixed CVE-2022-34670, CVE-2022-34674, CVE-2022-34675, CVE-2022-34677,
       CVE-2022-34679, CVE-2022-34680, CVE-2022-34682, CVE-2022-42254,
       CVE-2022-42256, CVE-2022-42257, CVE-2022-42258, CVE-2022-42259,
       CVE-2022-42260, CVE-2022-42261, CVE-2022-42262, CVE-2022-42263,
-      CVE-2022-42264.
+      CVE-2022-42264.  (Closes: #1025283)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5415
     - Improved performance on GPUs which are experiencing a high number
       of correctable ECC memory errors.
@@ -2170,7 +2170,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-9) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-9) unstable; urgency=medium
 
   * Backport find_vma_intersection changes from 450.203.08 to fix kernel
     module build for Linux 6.1.
