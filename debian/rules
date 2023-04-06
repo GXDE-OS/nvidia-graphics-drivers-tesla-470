@@ -327,10 +327,7 @@ override_dh_shlibdeps:
 	test -z "$$(ls debian/*.substvars 2>/dev/null)" || sed -r -i 's/libnvidia-(e?glcore)-$(version)/lib$(nvidia)-\1 (= $${binary:Version})/g' debian/*.substvars
 
 override_dh_gencontrol:
-	dh_gencontrol -pnvidia-nonglvnd-vulkan-common -- \
-		-V'nvidia=$(nvidia)' \
-		-v515.+~$(DEB_VERSION)
-	dh_gencontrol --remaining-packages -- \
+	dh_gencontrol -- \
 		-V'nvidia:Version=$(version)' \
 		-V'nvidia:Version:major=$(version_major)' \
 		-V'nvidia:xorgDepends=$(xorg_depends)' \

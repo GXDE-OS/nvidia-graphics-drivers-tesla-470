@@ -821,7 +821,7 @@ Description: NVIDIA Vulkan installable client driver (ICD)${nvidia:VariantDesc}
  Vulkan (GLVND variant) which supports NVIDIA GPUs.
 
 Package: nvidia-nonglvnd-vulkan-common
-Architecture: i386 amd64 ppc64el
+Architecture: #i386 amd64 ppc64el
 Multi-Arch: foreign
 Depends:
  ${misc:Depends}
