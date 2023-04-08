@@ -519,7 +519,7 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.236.01-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.236.01-1) unstable; urgency=medium
 
   * New upstream Tesla release 450.236.01 (2023-03-30).
     * Fixed CVE-2023-0184, CVE-2023-0189, CVE-2023-0180, CVE-2023-0185,
@@ -532,7 +532,7 @@ nvidia-graphics-drivers (450.236.01-1) UNRELEASED; urgency=medium
   * Refresh patches.
   * Backport acpi_op_remove changes from 470.182.03 to fix kernel module build
     for Linux 6.2.
-  * nvidia-alternative: Access kmod config files over a versioned
+  * nvidia-tesla-450-alternative: Access kmod config files over a versioned
     symlink (510.108.03-3).
   * Add versioned Provides: nvidia-kernel-dkms-any (515.65.01-1).
   * New Brazilian Portuguese (pt_BR) debconf translations by Paulo Henrique de
@@ -541,6 +541,12 @@ nvidia-graphics-drivers (450.236.01-1) UNRELEASED; urgency=medium
   * Bump Standards-Version to 4.6.2. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 06 Apr 2023 09:17:36 +0200
+
+nvidia-graphics-drivers-tesla-450 (450.216.04-1~deb11u1) bullseye; urgency=medium
+
+  * Rebuild for bullseye.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sat, 10 Dec 2022 01:53:07 +0100
 
 nvidia-graphics-drivers-tesla-450 (450.216.04-1) unstable; urgency=medium
 
@@ -1581,19 +1587,21 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-10) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-10) unstable; urgency=medium
 
   * Backport acpi_op_remove changes from 470.182.03 to fix kernel module build
     for Linux 6.2.
   * Backport drm_connector_has_override_edid changes from 525.78.01 to fix
     kernel module build for Linux 6.2.
-  * nvidia-alternative: Access kmod config files over a versioned
+  * nvidia-tesla-418-alternative: Access kmod config files over a versioned
     symlink (510.108.03-3).
   * Add versioned Provides: nvidia-kernel-dkms-any (515.65.01-1).
   * New Brazilian Portuguese (pt_BR) debconf translations by Paulo Henrique de
     Lima Santana.  (Closes: #1028264)
   * Updated Turkish (tr) debconf translations by Atila KOÇ. (Closes: #1033545)
   * Bump Standards-Version to 4.6.2. No changes needed.
+  * Build the nvidia-nonglvnd-vulkan-common package from this source, only
+    needed by nvidia-{legacy-390xx,tesla-418}-nonglvnd-vulkan-icd.
 
  -- Andreas Beckmann <anbe@debian.org>  Wed, 05 Apr 2023 10:00:34 +0200
 
