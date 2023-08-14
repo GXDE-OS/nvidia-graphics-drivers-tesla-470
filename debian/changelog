@@ -1111,7 +1111,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers-tesla-418 (418.226.00-12) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-12) unstable; urgency=medium
 
   * Backport get_user_pages changes from 520.56.06, 525.53 and 535.86.05 to
     fix kernel module build for Linux 6.5.
