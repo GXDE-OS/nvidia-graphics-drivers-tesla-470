@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-450 (450.248.02-3) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.248.02-3) unstable; urgency=medium
 
   * Revert backport of pin_user_pages changes.
   * Backport drm_gem_prime_handle_to_fd changes from 470.223.02 to fix kernel
