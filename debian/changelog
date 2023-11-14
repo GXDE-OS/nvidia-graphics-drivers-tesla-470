@@ -546,7 +546,7 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.248.02-3) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.248.02-3) unstable; urgency=medium
 
   * Revert backport of pin_user_pages changes.
   * Backport drm_gem_prime_handle_to_fd changes from 470.223.02 to fix kernel
@@ -1670,7 +1670,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-13) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-13) unstable; urgency=medium
 
   * Revert backport of pin_user_pages changes.
   * Backport drm_gem_prime_handle_to_fd changes from 470.223.02 to fix kernel
