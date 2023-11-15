@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-470 (470.199.02-4) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-470 (470.199.02-4) unstable; urgency=medium
 
   * Refuse to load module if IBT is enabled.  (Closes: #1052069)
   * Switch suggestion from obsolete vulkan-utils to vulkan-tools
