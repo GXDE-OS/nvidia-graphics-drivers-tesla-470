@@ -8,7 +8,7 @@ nvidia-graphics-drivers-tesla-470 (470.199.02-4) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-470 (470.199.02-3) unstable; urgency=medium
 
-  * Revert backport of pin_user_pages changes.  (Closes: #1052069)
+  * Revert backport of pin_user_pages changes.
   * Backport drm_gem_prime_handle_to_fd changes from 470.223.02 to fix kernel
     module build for Linux 6.6.
 
