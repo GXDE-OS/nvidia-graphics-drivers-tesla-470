@@ -546,7 +546,7 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.248.02-4) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.248.02-4) UNRELEASED; urgency=medium
 
   * The Tesla 450 driver series has been declared as End-of-Life by
     NVIDIA. No further updates fixing security issues, critical bugs, or
