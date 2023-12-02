@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.223.02-2~deb12u1) bookworm; urgency=medium
+
+  * Rebuild for bookworm.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sat, 02 Dec 2023 23:46:17 +0100
+
 nvidia-graphics-drivers-tesla-470 (470.223.02-2) unstable; urgency=medium
 
   * Build libnvidia-tesla-470-fbc1 for arm64, too.  (Closes: #1057078)
