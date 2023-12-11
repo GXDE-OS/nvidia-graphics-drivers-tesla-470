@@ -1460,7 +1460,7 @@ nvidia-graphics-drivers-tesla-418 (418.152.00-2) unstable; urgency=medium
     - Generate alternative versioned dependency on libnvidia-cfg.so.1 through
       the symbols file.
   * Test that the patches can be applied to the module source (450.66-1).
-  * nvidia-kernel-dkms: Ship with unapplied patches and apply the
+  * nvidia-tesla-418-kernel-dkms: Ship with unapplied patches and apply the
     patches while building kernel modules (450.66-1).
   * Simplify generating the -source and -dkms packages (450.66-1).
   * Backport nv_vmalloc and nv_mmap_* (mmap_{sem=>lock}) changes from 450.57
@@ -1543,7 +1543,7 @@ nvidia-graphics-drivers-tesla-418 (418.116.00-3) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-418 (418.116.00-2) experimental; urgency=medium
 
-  * Rename to *-tesla-418-*.
+  * Rename packages from *-tesla* to *-tesla-418*.
   * Add transitional nvidia-tesla-driver package.
   * Use separately packaged nvidia-settings-tesla-418.  (Closes: #948961)
   * Use substitution to keep Standards-Version in sync (430.64-5).
