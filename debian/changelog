@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.223.02-3) UNRELEASED; urgency=medium
+
+  * Build all unversioned packages from src:nvidia-graphics-drivers.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 12 Dec 2023 18:33:57 +0100
+
 nvidia-graphics-drivers-tesla-470 (470.223.02-2~deb11u1) bullseye; urgency=medium
 
   * Rebuild for bullseye.
@@ -14,6 +20,7 @@ nvidia-graphics-drivers-tesla-470 (470.223.02-2) unstable; urgency=medium
 
   * Build libnvidia-tesla-470-fbc1 for arm64, too.  (Closes: #1057078)
   * bug-control: Report information about more driver components.
+  * nvidia-detect: Drop support for Tesla 450 drivers (EoL).
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 02 Dec 2023 13:45:17 +0100
 
