@@ -8,7 +8,7 @@ nvidia-graphics-drivers-tesla-470 (470.223.02-4) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-470 (470.223.02-3) unstable; urgency=medium
 
-  * nvidia-cuda-mps is again built from from src:nvidia-graphics-drivers.
+  * nvidia-cuda-mps is again built from src:nvidia-graphics-drivers.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 25 Jan 2024 19:48:07 +0100
 

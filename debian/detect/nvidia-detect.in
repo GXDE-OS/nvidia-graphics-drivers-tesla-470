@@ -30,6 +30,7 @@ shopt -s compat31 nocasematch 2>/dev/null || { echo "Error: this script only wor
 # last time the PCI IDs were updated
 LATEST="#VERSION#"
 PACKAGE=
+RET=1
 
 NV_DETECT()
 {
@@ -209,25 +210,21 @@ fi
 	elif grep -q "bookworm\|^12" /etc/debian_version
 	then
 		if [[ -n ${VERSIONS[999]} ]]; then
-			if [[ -n ${VERSIONS[390]} ]]; then
-					echo "Your card is supported by all driver versions."
+			if [[ -n ${VERSIONS[470]} ]]; then
+				echo "Your card is supported by all driver versions."
 			else
 				echo "Your card is supported by the default drivers."
 			fi
 			PACKAGE="nvidia-driver"
-		elif [[ -n ${VERSIONS[390]} ]]; then
-			echo "Your card is only supported up to the 390 legacy drivers series."
-			PACKAGE="nvidia-legacy-390xx-driver"
-		elif [[ -n ${VERSIONS[391]} ]]; then
-			echo "Your card is only supported on the amd64 platform."
-			echo "Your card is only supported up to the 390 legacy drivers series."
-			PACKAGE="nvidia-legacy-390xx-driver:amd64"
 		elif [[ -n ${VERSIONS[470]} ]]; then
 			echo "Your card is supported by the Tesla 470 drivers series."
 			PACKAGE="nvidia-tesla-470-driver"
 		elif [[ -n ${VERSIONS[418]} ]]; then
-			echo "Your card is supported by the Tesla 418 drivers series."
-			PACKAGE="nvidia-tesla-418-driver"
+			echo "Your card is only supported by the Tesla 418 drivers series, which is only available up to bullseye."
+		elif [[ -n ${VERSIONS[390]} ]]; then
+			echo "Your card is only supported by the 390 legacy drivers series, which is only available up to bullseye."
+		elif [[ -n ${VERSIONS[391]} ]]; then
+			echo "Your card is only supported by the 390 legacy drivers series on amd64, which is only available up to bullseye."
 		elif [[ -n ${VERSIONS[340]} ]]; then
 			echo "Your card is only supported by the 340 legacy drivers series, which is only available up to buster."
 		elif [[ -n ${VERSIONS[304]} ]]; then
@@ -244,9 +241,6 @@ fi
 		if [ -n "$PACKAGE" ] && [ "$PACKAGE" != "nvidia-tesla-470-driver" ] && [[ -n ${VERSIONS[470]} ]]; then
 			echo "Your card is also supported by the Tesla 470 drivers series."
 		fi
-		if [ -n "$PACKAGE" ] && [ "$PACKAGE" != "nvidia-tesla-418-driver" ] && [[ -n ${VERSIONS[418]} ]]; then
-			echo "Your card is also supported by the Tesla 418 drivers series."
-		fi
 	else
 		echo "Uh oh. Failed to identify your Debian suite.";
 	fi;
@@ -255,6 +249,7 @@ if [ -n "$PACKAGE" ]; then
 	echo "It is recommended to install the"
 	echo "    $PACKAGE"
 	echo "package."
+	RET=0
 fi
 
 }
@@ -290,7 +285,7 @@ else
 		PCIID=$(echo "$id" | sed -rn 's/^(10de)?:?([0-9a-fA-F]{4})$/10de\2/ip')
 		if [ -z "$PCIID" ]; then
 			echo "Error parsing PCI ID '$id'."
-			exit 1
+			exit 2
 		fi
 
 		echo "Checking driver support for PCI ID [$(echo $PCIID | sed -r 's/(....)(....)/\1:\2/')]"
@@ -298,3 +293,5 @@ else
 	done
 
 fi
+
+exit $RET
