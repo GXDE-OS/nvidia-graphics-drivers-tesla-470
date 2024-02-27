@@ -1,3 +1,23 @@
+nvidia-graphics-drivers-tesla-470 (470.239.06-1) UNRELEASED; urgency=medium
+
+  * New upstream long term support branch release 470.239.06 (2024-02-22).
+    * Improved compatibility with recent Linux kernels.
+
+  [ Andreas Beckmann ]
+  * Refresh patches.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Feb 2024 11:27:25 +0100
+
+nvidia-graphics-drivers (470.239.06-1) UNRELEASED; urgency=medium
+
+  * New upstream long term support branch release 470.239.06 (2024-02-22).
+    * Improved compatibility with recent Linux kernels.
+
+  [ Andreas Beckmann ]
+  * Refresh patches.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Feb 2024 06:38:41 +0100
+
 nvidia-graphics-drivers-tesla-470 (470.223.02-4~deb12u1) bookworm; urgency=medium
 
   * Rebuild for bookworm.
