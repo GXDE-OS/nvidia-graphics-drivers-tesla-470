@@ -172,7 +172,7 @@ nvidia-graphics-drivers-tesla-460 (460.91.03-2) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-460 (460.91.03-1) unstable; urgency=medium
 
-  * New upstream production branch release 460.91.03 (2021-07-20).
+  * New upstream production and Tesla branch release 460.91.03 (2021-07-20).
     * Fixed CVE-2021-1093, CVE-2021-1094, CVE-2021-1095.  (Closes: #991357)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5211
     - Added support for the following GPUs: GeForce RTX 3070 Ti, CMP 50HX.
@@ -242,7 +242,7 @@ nvidia-graphics-drivers (460.80-1) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-460 (460.73.01-1) unstable; urgency=medium
 
-  * New upstream production branch release 460.73.01 (2021-04-14).
+  * New upstream production and Tesla branch release 460.73.01 (2021-04-14).
     * Fixed CVE-2021-1076, CVE-2021-1077.  (Closes: #987222)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5172
     - Added support for the following GPUs: A10, A10G, A30, PG506-232,
