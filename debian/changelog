@@ -567,7 +567,7 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.248.02-5) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.248.02-5) UNRELEASED; urgency=medium
 
   * Backport drm_unlocked_ioctl_flag_present changes from 470.239.06 to fix
     kernel module build for Linux 6.8.
@@ -1714,7 +1714,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-14) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-14) unstable; urgency=medium
 
   * Backport drm_unlocked_ioctl_flag_present changes from 470.239.06 to fix
     kernel module build for Linux 6.8.
@@ -1920,7 +1920,7 @@ nvidia-graphics-drivers-tesla-418 (418.211.00-2) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-418 (418.211.00-1) unstable; urgency=medium
 
-  * New upstream Tesla release 418.211.00 (2021-07-20).
+  * New upstream Tesla branch release 418.211.00 (2021-07-20).
     * Fixed CVE-2021-1093, CVE-2021-1094, CVE-2021-1095.  (Closes: #991354)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5211
 
@@ -1955,7 +1955,7 @@ nvidia-graphics-drivers (418.211.00-1) buster; urgency=medium
 
 nvidia-graphics-drivers-tesla-418 (418.197.02-1) unstable; urgency=medium
 
-  * New upstream Tesla release 418.197.02 (2021-04-19).
+  * New upstream Tesla branch release 418.197.02 (2021-04-19).
     * Fixed CVE-2021-1076.  (Closes: #987219)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5172
 
@@ -1985,7 +1985,7 @@ nvidia-graphics-drivers-tesla-418 (418.181.07-2) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-418 (418.181.07-1) unstable; urgency=medium
 
-  * New upstream Tesla release 418.181.07 (2021-01-19).
+  * New upstream Tesla branch release 418.181.07 (2021-01-19).
     * Fixed CVE-2021-1056.  (Closes: #979673)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5142
     * Improved compatibility with recent Linux kernels.
@@ -2068,7 +2068,7 @@ nvidia-graphics-drivers-tesla-418 (418.152.00-2) unstable; urgency=medium
 
 nvidia-graphics-drivers-tesla-418 (418.152.00-1) unstable; urgency=medium
 
-  * New upstream Tesla release 418.152.00 (2020-06-24).
+  * New upstream Tesla branch release 418.152.00 (2020-06-24).
     * Fixed CVE-2020-5963, CVE-2020-5967.  (Closes: #963766)
       https://nvidia.custhelp.com/app/answers/detail/a_id/5031
 
