@@ -1,4 +1,4 @@
-nvidia-graphics-drivers-tesla-470 (470.256.02-1) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-470 (470.256.02-1) unstable; urgency=medium
 
   * New upstream LTS and Tesla branch release 470.256.02 (2024-06-04).
     * Fixed CVE-2024-0090, CVE-2024-0092.  (Closes: #1072798)
@@ -10,7 +10,7 @@ nvidia-graphics-drivers-tesla-470 (470.256.02-1) UNRELEASED; urgency=medium
   [ Andreas Beckmann ]
   * Refresh patches.
 
- -- Andreas Beckmann <anbe@debian.org>  Sun, 09 Jun 2024 22:21:31 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 10 Jun 2024 10:33:16 +0200
 
 nvidia-graphics-drivers (470.256.02-1) bullseye; urgency=medium
 
