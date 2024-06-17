@@ -27,6 +27,7 @@ nvidia-graphics-drivers (470.256.02-1) bullseye; urgency=medium
   * Move the libnvidia-glvkspirv dependency to libnvidia-(e)glcore.
     (Cf. #1064194)
   * Bump Standards-Version to 4.7.0. No changes needed.
+  * Upload to bullseye.
 
  -- Andreas Beckmann <anbe@debian.org>  Sun, 09 Jun 2024 09:55:50 +0200
 
