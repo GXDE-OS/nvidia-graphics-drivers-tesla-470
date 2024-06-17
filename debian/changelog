@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.256.02-1~deb12u1) bookworm; urgency=medium
+
+  * Rebuild for bookworm.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 17 Jun 2024 23:06:22 +0200
+
 nvidia-graphics-drivers-tesla-470 (470.256.02-1) unstable; urgency=medium
 
   * New upstream LTS and Tesla branch release 470.256.02 (2024-06-04).
