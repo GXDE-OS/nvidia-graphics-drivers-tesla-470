@@ -1,3 +1,9 @@
+nvidia-graphics-drivers-tesla-470 (470.256.02-1~deb11u1) bullseye; urgency=medium
+
+  * Rebuild for bullseye.
+
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 19 Jun 2024 13:19:12 +0200
+
 nvidia-graphics-drivers-tesla-470 (470.256.02-1~deb12u1) bookworm; urgency=medium
 
   * Rebuild for bookworm.
