@@ -1,3 +1,11 @@
+nvidia-graphics-drivers (470.256.02-2) bullseye; urgency=medium
+
+  * ppc64el: Use pfn_valid() variant with rcu_read_{,un}lock_sched() for
+    Linux 5.10 from 5.10.210 onwards to avoid using GPL symbols.
+  * Upload to bullseye.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 24 Jun 2024 09:13:50 +0200
+
 nvidia-graphics-drivers-tesla-470 (470.256.02-1~deb11u1) bullseye; urgency=medium
 
   * Rebuild for bullseye.
@@ -136,6 +144,7 @@ nvidia-graphics-drivers (470.223.02-2) bullseye; urgency=medium
   * nvidia-detect: Drop support for Tesla 450 drivers (EoL).
   * *-common: Drop alternative Suggests on EoL Tesla 450 packages that have
     been turned into transitional packages.
+  * Upload to bullseye.
 
  -- Andreas Beckmann <anbe@debian.org>  Wed, 21 Feb 2024 09:55:22 +0100
 
