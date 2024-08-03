@@ -6,6 +6,8 @@ bashisms.patch
 0033-refuse-to-load-legacy-module-if-IBT-is-enabled.patch
 0034-fix-typos.patch
 0035-use-pfn_valid-variant-with-rcu_read_-un-lock_sched.patch
+0042-Log-an-error-message-when-nv_mem_client_init-fails-d.patch
+0043-backport-follow_pfn-changes-from-550.90.07.patch
 
 # build system updates
 fragile-ARCH.patch
