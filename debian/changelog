@@ -1,7 +1,7 @@
 nvidia-graphics-drivers-tesla-470 (470.256.02-3) unstable; urgency=medium
 
   * Use dh_movetousr (if available) to relocate the firmware to /usr where
-    needed.  (Closes: #1073744)
+    needed.  (Closes: #1073682)
   * Log an error message if nvidia-peermem refuses to load because it was
     built without IB peer memory symbols present.  (Closes: #1074350)
   * Backport follow_pfn changes from 550.90.07 to fix kernel module build for
