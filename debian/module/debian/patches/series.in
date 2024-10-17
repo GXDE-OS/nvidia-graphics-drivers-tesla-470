@@ -8,7 +8,8 @@ bashisms.patch
 0037-import-pfn_valid-w-o-GPL-rcu_read_lock-unlock-from-v.patch
 0042-Log-an-error-message-when-nv_mem_client_init-fails-d.patch
 0043-backport-follow_pfn-changes-from-550.90.07.patch
-0045-wrap-virt_addr_valid-to-use-nv_pfn_valid-on-ppc64el.patch
+0045-let-the-virt_addr_valid-macro-use-nv_pfn_valid-on-pp.patch
+0046-virt_addr_valid-wants-a-void-argument.patch
 
 # build system updates
 fragile-ARCH.patch
