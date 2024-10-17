@@ -1016,7 +1016,7 @@ nvidia-graphics-drivers (465.24.02-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Apr 2021 18:48:53 +0200
 
-nvidia-graphics-drivers (460.106.00-18) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.106.00-18) UNRELEASED; urgency=medium
 
   * ppc64el: Simplify virt_addr_valid changes.
   * Ensure macro virt_addr_valid() gets called with a void* argument.
@@ -1609,7 +1609,7 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.248.02-8) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.248.02-8) UNRELEASED; urgency=medium
 
   * ppc64el: Simplify virt_addr_valid changes.
   * Ensure macro virt_addr_valid() gets called with a void* argument.
