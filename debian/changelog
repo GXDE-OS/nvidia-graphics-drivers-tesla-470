@@ -1180,10 +1180,10 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-17) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-17) unstable; urgency=medium
 
   * Backport drm_output_poll_changed changes from 535.216.01 to fix kernel
-    module build for Linux 6.12.
+    module build for Linux 6.12.  (Closes: #1090248)
   * Backport warning fixes from 430.09, 435.17, 510.39.01, 535.146.02,
     535.216.01, 535.230.02, 560.28.03 and 565.57.01.
   * Simplify using nv_pfn_valid() in virt_addr_valid() on ppc64el.
