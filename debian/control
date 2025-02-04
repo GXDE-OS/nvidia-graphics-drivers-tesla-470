@@ -158,10 +158,10 @@ Section: non-free/kernel
 Architecture: amd64 arm64 ppc64el
 Depends:
  debhelper-compat (= ${nvidia:debhelper-compat}),
+ module-assistant,
  quilt,
  ${misc:Depends}
 Recommends:
- module-assistant,
  ${nvidia-kernel}-support--v1,
 Suggests:
  ${nvidia}-driver (>= ${nvidia:Version}),
