@@ -1029,10 +1029,10 @@ nvidia-graphics-drivers (465.24.02-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 27 Apr 2021 18:48:53 +0200
 
-nvidia-graphics-drivers (460.106.00-19) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-460 (460.106.00-19) UNRELEASED; urgency=medium
 
   * Backport drm_output_poll_changed changes from 535.216.01 to fix kernel
-    module build for Linux 6.12.
+    module build for Linux 6.12.  (Closes: #1090251)
   * Backport file_operations_fop_unsigned_offset_present changes from
     535.230.02.
   * Backport warning fixes from 510.39.01, 525.53, 535.146.02,
@@ -1635,10 +1635,10 @@ nvidia-graphics-drivers (455.23.04-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 24 Sep 2020 21:52:54 +0200
 
-nvidia-graphics-drivers (450.248.02-9) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-450 (450.248.02-9) UNRELEASED; urgency=medium
 
   * Backport drm_output_poll_changed changes from 535.216.01 to fix kernel
-    module build for Linux 6.12.
+    module build for Linux 6.12.  (Closes: #1090250)
   * Backport file_operations_fop_unsigned_offset_present changes from
     535.230.02.
   * Backport warning fixes from 510.39.01, 535.146.02,
@@ -2819,10 +2819,10 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-17) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-17) unstable; urgency=medium
 
   * Backport drm_output_poll_changed changes from 535.216.01 to fix kernel
-    module build for Linux 6.12.
+    module build for Linux 6.12.  (Closes: #1090248)
   * Backport file_operations_fop_unsigned_offset_present changes from
     535.230.02.
   * Backport warning fixes from 430.09, 435.17, 510.39.01, 535.146.02,
