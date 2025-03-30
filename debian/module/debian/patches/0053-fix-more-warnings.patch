@@ -1,4 +1,4 @@
-From e765b65f23713250316cb5a4caf8095fa9c1f71c Mon Sep 17 00:00:00 2001
+From 6878636ece887d7062f02bbe4c583ddbac0e2af0 Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Sun, 8 Dec 2024 22:13:22 +0100
 Subject: [PATCH] fix more warnings
@@ -6,13 +6,14 @@ Subject: [PATCH] fix more warnings
 ---
  common/inc/nv-linux.h                 | 8 ++++++++
  common/inc/nv-proto.h                 | 2 +-
+ nvidia-drm/nvidia-drm-crtc.c          | 2 ++
  nvidia-modeset/nvidia-modeset-linux.c | 1 +
  nvidia/nv-dma.c                       | 1 +
  nvidia/nv-frontend.c                  | 2 --
  nvidia/nv-frontend.h                  | 3 +++
  nvidia/nv-mmap.c                      | 1 +
  nvidia/nv.c                           | 1 +
- 8 files changed, 16 insertions(+), 3 deletions(-)
+ 9 files changed, 18 insertions(+), 3 deletions(-)
 
 diff --git a/common/inc/nv-linux.h b/common/inc/nv-linux.h
 index d22f9dc5..b05f88f7 100644
@@ -70,6 +71,21 @@ index 79cccfa1..8ddae2eb 100644
  void        nv_revoke_gpu_mappings_locked(nv_state_t *);
  
  NvUPtr      nv_vm_map_pages             (struct page **, NvU32, NvBool);
+diff --git a/nvidia-drm/nvidia-drm-crtc.c b/nvidia-drm/nvidia-drm-crtc.c
+index 8a9ea276..33bdef05 100644
+--- a/nvidia-drm/nvidia-drm-crtc.c
++++ b/nvidia-drm/nvidia-drm-crtc.c
+@@ -367,8 +367,10 @@ static int nv_drm_plane_atomic_set_property(
+     uint64_t val)
+ {
+     struct nv_drm_device *nv_dev = to_nv_device(plane->dev);
++#if defined(NV_LINUX_NVHOST_H_PRESENT) && defined(CONFIG_TEGRA_GRHOST)
+     struct nv_drm_plane_state *nv_drm_plane_state =
+         to_nv_drm_plane_state(state);
++#endif
+ 
+     if (property == nv_dev->nv_out_fence_property) {
+ #if defined(NV_LINUX_NVHOST_H_PRESENT) && defined(CONFIG_TEGRA_GRHOST)
 diff --git a/nvidia-modeset/nvidia-modeset-linux.c b/nvidia-modeset/nvidia-modeset-linux.c
 index 8c4d0949..3c7f4dc8 100644
 --- a/nvidia-modeset/nvidia-modeset-linux.c
