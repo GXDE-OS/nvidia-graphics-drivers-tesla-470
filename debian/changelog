@@ -1202,7 +1202,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-20) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-20) UNRELEASED; urgency=medium
 
   * Backport nv_vma_start_write changes from 570.169.
 
