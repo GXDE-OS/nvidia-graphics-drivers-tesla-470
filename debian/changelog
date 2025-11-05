@@ -1215,7 +1215,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers-tesla-418 (418.226.00-20) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-20) unstable; urgency=medium
 
   [ Andreas Beckmann ]
   * Backport drm_fb_create_takes_format_info changes from 535.274.02 to fix
