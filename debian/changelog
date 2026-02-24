@@ -1225,7 +1225,7 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
-nvidia-graphics-drivers (418.226.00-21) UNRELEASED; urgency=medium
+nvidia-graphics-drivers-tesla-418 (418.226.00-21) unstable; urgency=medium
 
   * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state and
     nv_in_hardirq changes from 580.119.02 and vma_flags_set_word and
