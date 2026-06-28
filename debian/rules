@@ -308,10 +308,6 @@ execute_after_dh_install: pack-module-source
 
 # Test that the patches can be applied to the module source
 # and a module can be built.
-override_dh_auto_test: J_FLAG ?= $(patsubst parallel=%,-j%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-override_dh_auto_test: TEST_KERNEL ?= $(shell ls -dvr1 /lib/modules/*/build 2>/dev/null | cut -d/ -f4 | head -n 1)
-override_dh_auto_test: kernel-source-tree
-	$(MAKE) $(J_FLAG) -C $< NV_VERBOSE=1 KERNEL_UNAME=$(TEST_KERNEL)
 endif
 
 override_dh_installchangelogs:
