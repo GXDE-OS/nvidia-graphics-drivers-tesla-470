@@ -1,9 +1,9 @@
 nvidia-graphics-drivers (390.157-15) UNRELEASED; urgency=medium
 
-  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state and
-    nv_in_hardirq changes from 580.119.02 and vma_flags_set_word and
-    dma_map_ops_has_map_phys changes from 580.126.09 to fix kernel module
-    build for Linux 6.19.
+  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state
+    changes from 535.309.01, nv_in_hardirq changes from 580.119.02 and
+    vma_flags_set_word and dma_map_ops_has_map_phys changes from 580.126.09 to
+    fix kernel module build for Linux 6.19.
   * Bump Standards-Version to 4.7.3. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 17 Feb 2026 05:29:26 +0100

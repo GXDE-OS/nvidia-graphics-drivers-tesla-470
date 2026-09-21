@@ -59,10 +59,9 @@ do-div-cast.patch
 0077-backport-vma_flags_set_word-changes-from-580.126.09.patch
 #HAS_UVM#0078-backport-vma_flags_set_word-changes-from-580.126.09-.patch
 0079-backport-dma_map_ops_has_map_phys-changes-from-580.1.patch
-0080-backport-for_each_-_plane_in_state-changes-from-580..patch
-0081-support-fallback-for-for_each_-_plane_in_state.patch
-0082-backport-for_each_-_crtc_in_state-changes-from-580.1.patch
-0083-support-fallback-for-for_each_-_crtc_in_state.patch
+0080-backport-for_each_-_connector_in_state-changes-from-.patch
+0081-backport-for_each_-_crtc_in_state-changes-from-535.3.patch
+0082-backport-for_each_-_plane_in_state-changes-from-535..patch
 
 # build system updates
 conftest-verbose.patch
