@@ -138,6 +138,9 @@ nvidia-graphics-drivers (340.108-1~git4deb8jessie) UNRELEASED; urgency=medium
 
 nvidia-graphics-drivers (340.108-2) UNRELEASED; urgency=medium
 
+  * Backport
+    screen_info changes from 450.51 to fix kernel module build for Linux 7.0.
+
   * Backport drm_print.h changes from 570.211.01, nv_in_hardirq changes from
     580.119.02 and vma_flags_set_word changes from 580.126.09 to fix kernel
     module build for Linux 6.19.
