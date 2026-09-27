@@ -66,6 +66,7 @@ do-div-cast.patch
 0082-backport-for_each_-_plane_in_state-changes-from-535..patch
 0083-backport-dma_fence_signal-changes-from-535.309.01.patch
 0084-backport-is_vma_write_locked_has_mm_lock_seq_arg-cha.patch
+0085-backport-drm_atomic_commit_struct_present-changes-fr.patch
 
 # build system updates
 conftest-verbose.patch
