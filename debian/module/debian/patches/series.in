@@ -64,6 +64,7 @@ do-div-cast.patch
 0080-backport-for_each_-_connector_in_state-changes-from-.patch
 0081-backport-for_each_-_crtc_in_state-changes-from-535.3.patch
 0082-backport-for_each_-_plane_in_state-changes-from-535..patch
+0083-backport-dma_fence_signal-changes-from-535.309.01.patch
 0084-backport-is_vma_write_locked_has_mm_lock_seq_arg-cha.patch
 
 # build system updates
