@@ -23,7 +23,8 @@ do-div-cast.patch
 0033-refuse-to-load-legacy-module-if-IBT-is-enabled.patch
 #HAS_UVM#0034-fix-typos.patch
 0038-backport-drm_unlocked_ioctl_flag_present-changes-fro.patch
-0048-backport-screen_info-changes-from-450.51.patch
+0038-backport-screen_info-changes-from-450.51.patch
+0039-backport-screen_info-changes-from-470.182.03.patch
 0040-backport-screen_info-changes-from-470.239.06.patch
 0041-backport-CONFIG_MITIGATION_RETPOLINE-changes-from-47.patch
 0043-backport-follow_pfn-changes-from-550.90.07.patch

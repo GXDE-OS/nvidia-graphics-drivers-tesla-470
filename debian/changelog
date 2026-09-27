@@ -1,7 +1,8 @@
 nvidia-graphics-drivers (390.157-16) UNRELEASED; urgency=medium
 
-  * Backport is_vma_write_locked_has_mm_lock_seq_arg changes from 580.142 and
-    screen_info changes from 450.51 to fix kernel module build for Linux 7.0.
+  * Backport is_vma_write_locked_has_mm_lock_seq_arg changes from 580.142,
+    screen_info changes from 450.51 and 470.239.06
+    to fix kernel module build for Linux 7.0.
 
  -- Andreas Beckmann <anbe@debian.org>  Sun, 27 Sep 2026 07:11:40 +0200
 
