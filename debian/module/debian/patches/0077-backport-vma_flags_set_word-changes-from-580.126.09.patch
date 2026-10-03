@@ -1,4 +1,4 @@
-From 533b78e23472ad9a28cfcb38d8c2770ccd849ad3 Mon Sep 17 00:00:00 2001
+From 6e77f42df7da2b3be5c813abc82fe82696f2eea5 Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Tue, 27 Jan 2026 19:48:54 +0100
 Subject: [PATCH] backport vma_flags_set_word changes from 580.126.09
@@ -119,7 +119,7 @@ index ec68ffe7..73d76f05 100755
  
          drm_driver_has_dumb_destroy)
 diff --git a/nvidia/nvidia.Kbuild b/nvidia/nvidia.Kbuild
-index 0062b493..1cf0dcad 100644
+index b6bb316b..023ac601 100644
 --- a/nvidia/nvidia.Kbuild
 +++ b/nvidia/nvidia.Kbuild
 @@ -167,6 +167,8 @@ NV_CONFTEST_FUNCTION_COMPILE_TESTS += vga_tryget
@@ -131,7 +131,7 @@ index 0062b493..1cf0dcad 100644
  
  NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_gpl_of_node_to_nid
  NV_CONFTEST_SYMBOL_COMPILE_TESTS += is_export_symbol_gpl_sme_active
-@@ -207,7 +209,6 @@ NV_CONFTEST_TYPE_COMPILE_TESTS += mm_has_mmap_lock
+@@ -208,7 +210,6 @@ NV_CONFTEST_TYPE_COMPILE_TESTS += mm_has_mmap_lock
  NV_CONFTEST_TYPE_COMPILE_TESTS += pci_channel_state
  NV_CONFTEST_TYPE_COMPILE_TESTS += kmem_cache_has_kobj_remove_work
  NV_CONFTEST_TYPE_COMPILE_TESTS += sysfs_slab_unlink

@@ -83,7 +83,7 @@ bashisms.patch
 0084-backport-is_vma_write_locked_has_mm_lock_seq_arg-cha.patch
 0085-backport-drm_atomic_commit_struct_present-changes-fr.patch
 0086-backport-strncpy-changes-from-580.178.04.patch
-#HAS_UVM#0087-backport-strncpy-changes-from-580.178.04-uvm-part.patch
+0087-backport-strncpy-changes-from-580.178.04-uvm-part.patch
 
 # build system updates
 conftest-verbose.patch
