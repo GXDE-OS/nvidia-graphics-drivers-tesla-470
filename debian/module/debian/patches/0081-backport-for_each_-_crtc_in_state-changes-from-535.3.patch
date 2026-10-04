@@ -1,4 +1,4 @@
-From 7719a973f9fb8d2818f46ebc39bda41e419cbfd7 Mon Sep 17 00:00:00 2001
+From d4ab47400f0df58faebc0857507de7aba8c7bc47 Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Sat, 12 Sep 2026 03:30:04 +0200
 Subject: [PATCH] backport for_each_*_crtc_in_state changes from 535.309.01
@@ -10,10 +10,10 @@ Subject: [PATCH] backport for_each_*_crtc_in_state changes from 535.309.01
  3 files changed, 30 insertions(+), 14 deletions(-)
 
 diff --git a/nvidia-drm/nvidia-drm-crtc.c b/nvidia-drm/nvidia-drm-crtc.c
-index 6fd8f365..87d73c8c 100644
+index a4cac304..81e71ea5 100644
 --- a/nvidia-drm/nvidia-drm-crtc.c
 +++ b/nvidia-drm/nvidia-drm-crtc.c
-@@ -151,7 +151,7 @@ static int nv_drm_plane_atomic_check(struct drm_plane *plane,
+@@ -196,7 +196,7 @@ static int nv_drm_plane_atomic_check(struct drm_plane *plane,
          goto done;
      }
  
@@ -23,7 +23,7 @@ index 6fd8f365..87d73c8c 100644
          struct NvKmsKapiHeadRequestedConfig *head_req_config =
              &nv_crtc_state->req_config;
 diff --git a/nvidia-drm/nvidia-drm-helper.h b/nvidia-drm/nvidia-drm-helper.h
-index c1828ddb..eb3b342b 100644
+index 0ca0a5bb..7b6007e6 100644
 --- a/nvidia-drm/nvidia-drm-helper.h
 +++ b/nvidia-drm/nvidia-drm-helper.h
 @@ -260,6 +260,31 @@ int nv_drm_atomic_helper_disable_all(struct drm_device *dev,
@@ -59,7 +59,7 @@ index c1828ddb..eb3b342b 100644
   * nv_drm_for_each_plane_in_state - iterate over all planes in an atomic update
   * @__state: &struct drm_atomic_state pointer
 diff --git a/nvidia-drm/nvidia-drm-modeset.c b/nvidia-drm/nvidia-drm-modeset.c
-index 4a1d6720..79516057 100644
+index 22158af6..a97846de 100644
 --- a/nvidia-drm/nvidia-drm-modeset.c
 +++ b/nvidia-drm/nvidia-drm-modeset.c
 @@ -154,20 +154,13 @@ nv_drm_atomic_apply_modeset_config(struct drm_device *dev,

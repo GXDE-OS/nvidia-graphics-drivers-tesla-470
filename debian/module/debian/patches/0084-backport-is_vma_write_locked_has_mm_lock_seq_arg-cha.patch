@@ -1,4 +1,4 @@
-From 99512ed09db8f4d13bfde4fb5a254a68363ce4c5 Mon Sep 17 00:00:00 2001
+From 2e67c65f1157584f51ac1808a91a0052f40764d3 Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Sat, 12 Sep 2026 03:50:44 +0200
 Subject: [PATCH] backport is_vma_write_locked_has_mm_lock_seq_arg changes from
@@ -12,10 +12,10 @@ Subject: [PATCH] backport is_vma_write_locked_has_mm_lock_seq_arg changes from
  4 files changed, 43 insertions(+), 5 deletions(-)
 
 diff --git a/common/inc/nv-mm.h b/common/inc/nv-mm.h
-index 2a492d6e..48dc3dd9 100644
+index 92723330..ae489c9c 100644
 --- a/common/inc/nv-mm.h
 +++ b/common/inc/nv-mm.h
-@@ -288,6 +288,16 @@ static inline void nv_vma_flags_clear_word(struct vm_area_struct *vma, unsigned
+@@ -276,6 +276,16 @@ static inline void nv_vma_flags_clear_word(struct vm_area_struct *vma, unsigned
      ACCESS_PRIVATE(vma, __vm_flags) &= ~flags;
  #endif
  }
@@ -33,10 +33,10 @@ index 2a492d6e..48dc3dd9 100644
  
  #include <linux/version.h>
 diff --git a/conftest.sh b/conftest.sh
-index 429d203f..7d3dbea4 100755
+index e4cf76cf..c1fb8854 100755
 --- a/conftest.sh
 +++ b/conftest.sh
-@@ -4610,6 +4610,26 @@ compile_test() {
+@@ -4838,6 +4838,26 @@ compile_test() {
              compile_check_conftest "$CODE" "NV_DRM_CONNECTOR_HELPER_FUNCS_MODE_VALID_HAS_CONST_MODE_ARG" "" "types"
          ;;
  
@@ -64,10 +64,10 @@ index 429d203f..7d3dbea4 100755
          # specifying the relevant upstream Linux kernel commit.  Please
          # avoid specifying -rc kernels, and only use SHAs that actually exist
 diff --git a/nvidia/nv-mmap.c b/nvidia/nv-mmap.c
-index aa300396..1f47db28 100644
+index 0e6edb81..c47c15d8 100644
 --- a/nvidia/nv-mmap.c
 +++ b/nvidia/nv-mmap.c
-@@ -599,15 +599,22 @@ int nvidia_mmap(
+@@ -803,15 +803,22 @@ void NV_API_CALL nv_set_safe_to_mmap_locked(
  }
  
  #if !NV_CAN_CALL_VMA_START_WRITE
@@ -92,7 +92,7 @@ index aa300396..1f47db28 100644
      {
          return NV_FALSE;
      }
-@@ -637,7 +644,7 @@ static NvBool nv_vma_enter_locked(struct vm_area_struct *vma, NvBool detaching)
+@@ -841,7 +848,7 @@ static NvBool nv_vma_enter_locked(struct vm_area_struct *vma, NvBool detaching)
      if (interrupted)
      {
          // Clean up on error: release refcount and dep_map
@@ -101,7 +101,7 @@ index aa300396..1f47db28 100644
          rwsem_release(&vma->vmlock_dep_map, _RET_IP_);
          return NV_FALSE;
      }
-@@ -653,7 +660,7 @@ void nv_vma_start_write(struct vm_area_struct *vma)
+@@ -857,7 +864,7 @@ void nv_vma_start_write(struct vm_area_struct *vma)
  {
      NvU32 mm_lock_seq;
      NvBool locked;
@@ -110,7 +110,7 @@ index aa300396..1f47db28 100644
          return;
  
      locked = nv_vma_enter_locked(vma, NV_FALSE);
-@@ -662,7 +669,7 @@ void nv_vma_start_write(struct vm_area_struct *vma)
+@@ -866,7 +873,7 @@ void nv_vma_start_write(struct vm_area_struct *vma)
      if (locked)
      {
          NvBool detached;
@@ -120,13 +120,13 @@ index aa300396..1f47db28 100644
          WARN_ON_ONCE(detached);
      }
 diff --git a/nvidia/nvidia.Kbuild b/nvidia/nvidia.Kbuild
-index a2ab536c..ddfff51c 100644
+index f81e61f1..eace2fef 100644
 --- a/nvidia/nvidia.Kbuild
 +++ b/nvidia/nvidia.Kbuild
-@@ -211,6 +211,7 @@ NV_CONFTEST_TYPE_COMPILE_TESTS += mm_has_mmap_lock
+@@ -201,6 +201,7 @@ NV_CONFTEST_TYPE_COMPILE_TESTS += timeval
+ NV_CONFTEST_TYPE_COMPILE_TESTS += timespec64
+ NV_CONFTEST_TYPE_COMPILE_TESTS += mm_has_mmap_lock
  NV_CONFTEST_TYPE_COMPILE_TESTS += pci_channel_state
- NV_CONFTEST_TYPE_COMPILE_TESTS += kmem_cache_has_kobj_remove_work
- NV_CONFTEST_TYPE_COMPILE_TESTS += sysfs_slab_unlink
 +NV_CONFTEST_TYPE_COMPILE_TESTS += is_vma_write_locked_has_mm_lock_seq_arg
  
  NV_CONFTEST_GENERIC_COMPILE_TESTS += dom0_kernel_present
