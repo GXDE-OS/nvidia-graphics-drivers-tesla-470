@@ -1,9 +1,19 @@
+nvidia-graphics-drivers-tesla-450 (450.248.02-14) UNRELEASED; urgency=medium
+
+  * Backport drm_atomic_commit_struct_present changes from 580.173.02 and
+    strncpy changes from 580.178.04 to fix kernel module build for Linux 7.2.
+  * Backport is_vma_write_locked_has_mm_lock_seq_arg changes from 580.142 and
+    dma_fence_signal changes from 535.309.01 to fix kernel module build for
+    Linux 7.0.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 05 Oct 2026 20:43:05 +0200
+
 nvidia-graphics-drivers-tesla-450 (450.248.02-13) UNRELEASED; urgency=medium
 
-  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state and
-    nv_in_hardirq changes from 580.119.02 and vma_flags_set_word and
-    dma_map_ops_has_map_phys changes from 580.126.09 to fix kernel module
-    build for Linux 6.19.
+  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state
+    changes from 535.309.01, nv_in_hardirq changes from 580.119.02 and
+    vma_flags_set_word and dma_map_ops_has_map_phys changes from 580.126.09 to
+    fix kernel module build for Linux 6.19.
   * Bump Standards-Version to 4.7.3. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 24 Feb 2026 18:27:35 +0100
@@ -1225,12 +1235,22 @@ nvidia-graphics-drivers (430.14-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sat, 25 May 2019 13:49:09 +0200
 
+nvidia-graphics-drivers (418.226.00-22) UNRELEASED; urgency=medium
+
+  * Backport drm_atomic_commit_struct_present changes from 580.173.02 and
+    strncpy changes from 580.178.04 to fix kernel module build for Linux 7.2.
+  * Backport is_vma_write_locked_has_mm_lock_seq_arg changes from 580.142,
+    screen_info changes from 450.51 and 470.239.06 and dma_fence_signal
+    changes from 535.309.01 to fix kernel module build for Linux 7.0.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 04 Oct 2026 22:08:49 +0200
+
 nvidia-graphics-drivers-tesla-418 (418.226.00-21) unstable; urgency=medium
 
-  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state and
-    nv_in_hardirq changes from 580.119.02 and vma_flags_set_word and
-    dma_map_ops_has_map_phys changes from 580.126.09 to fix kernel module
-    build for Linux 6.19.
+  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state
+    changes from 535.309.01, nv_in_hardirq changes from 580.119.02 and
+    vma_flags_set_word and dma_map_ops_has_map_phys changes from 580.126.09 to
+    fix kernel module build for Linux 6.19.
   * Bump Standards-Version to 4.7.3. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Sun, 22 Feb 2026 14:26:47 +0100
@@ -2300,12 +2320,22 @@ nvidia-graphics-drivers (396.18-1) experimental; urgency=medium
 
  -- Andreas Beckmann <anbe@debian.org>  Sun, 22 Apr 2018 13:59:45 +0200
 
+nvidia-graphics-drivers (390.157-16) UNRELEASED; urgency=medium
+
+  * Backport drm_atomic_commit_struct_present changes from 580.173.02 and
+    strncpy changes from 580.178.04 to fix kernel module build for Linux 7.2.
+  * Backport is_vma_write_locked_has_mm_lock_seq_arg changes from 580.142,
+    screen_info changes from 450.51 and 470.239.06 and dma_fence_signal
+    changes from 535.309.01 to fix kernel module build for Linux 7.0.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 28 Sep 2026 21:28:25 +0200
+
 nvidia-graphics-drivers (390.157-15) UNRELEASED; urgency=medium
 
-  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state and
-    nv_in_hardirq changes from 580.119.02 and vma_flags_set_word and
-    dma_map_ops_has_map_phys changes from 580.126.09 to fix kernel module
-    build for Linux 6.19.
+  * Backport drm_print.h changes from 570.211.01, for_each_*_*_in_state
+    changes from 535.309.01, nv_in_hardirq changes from 580.119.02 and
+    vma_flags_set_word and dma_map_ops_has_map_phys changes from 580.126.09 to
+    fix kernel module build for Linux 6.19.
   * Bump Standards-Version to 4.7.3. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 17 Feb 2026 05:29:26 +0100
@@ -5275,6 +5305,9 @@ nvidia-graphics-drivers (343.22-1) experimental; urgency=medium
  -- Andreas Beckmann <anbe@debian.org>  Mon, 20 Oct 2014 19:04:58 +0200
 
 nvidia-graphics-drivers (340.108-2) UNRELEASED; urgency=medium
+
+  * Backport is_vma_write_locked_has_mm_lock_seq_arg changes from 580.142 and
+    screen_info changes from 450.51 to fix kernel module build for Linux 7.0.
 
   * Backport drm_print.h changes from 570.211.01, nv_in_hardirq changes from
     580.119.02 and vma_flags_set_word changes from 580.126.09 to fix kernel
