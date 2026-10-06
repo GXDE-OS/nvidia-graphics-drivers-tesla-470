@@ -1,4 +1,4 @@
-From eb41e9b905a7e8979ecad68c29040a2adbfd089c Mon Sep 17 00:00:00 2001
+From 2553a354e75bcb06eec5ec1b1ae6439ebfc19e5c Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Mon, 21 Sep 2026 04:29:20 +0200
 Subject: [PATCH] backport dma_fence_signal changes from 535.309.01

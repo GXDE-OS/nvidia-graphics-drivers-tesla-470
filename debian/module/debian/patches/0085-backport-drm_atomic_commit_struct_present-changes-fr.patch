@@ -1,4 +1,4 @@
-From 97f1556b3ea566cb24138062b49ae4c16c8f5377 Mon Sep 17 00:00:00 2001
+From 83ef6740031cca6e1c18d072a040844f86882a05 Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Mon, 7 Sep 2026 22:44:04 +0200
 Subject: [PATCH] backport drm_atomic_commit_struct_present changes from
@@ -15,10 +15,10 @@ Subject: [PATCH] backport drm_atomic_commit_struct_present changes from
  7 files changed, 146 insertions(+), 29 deletions(-)
 
 diff --git a/conftest.sh b/conftest.sh
-index c1fb8854..3c541ef7 100755
+index 25e150bc..fcad4cf4 100755
 --- a/conftest.sh
 +++ b/conftest.sh
-@@ -3622,9 +3622,14 @@ compile_test() {
+@@ -3727,9 +3727,14 @@ compile_test() {
              # in v4.8 (2016-06-10).
              #
              CODE="
@@ -33,7 +33,7 @@ index c1fb8854..3c541ef7 100755
                      bool stall) {
                  (void)drm_atomic_helper_swap_state(state, stall);
              }"
-@@ -3641,9 +3646,14 @@ compile_test() {
+@@ -3746,9 +3751,14 @@ compile_test() {
              # (2017-07-11).
              #
              CODE="
@@ -48,7 +48,7 @@ index c1fb8854..3c541ef7 100755
                      bool stall) {
                  return drm_atomic_helper_swap_state(state, stall);
              }"
-@@ -4858,6 +4868,22 @@ compile_test() {
+@@ -5142,6 +5152,22 @@ compile_test() {
              compile_check_conftest "$CODE" "NV_IS_VMA_WRITE_LOCKED_HAS_MM_LOCK_SEQ_ARG" "" "types"
          ;;
  
@@ -72,11 +72,11 @@ index c1fb8854..3c541ef7 100755
          # specifying the relevant upstream Linux kernel commit.  Please
          # avoid specifying -rc kernels, and only use SHAs that actually exist
 diff --git a/nvidia-drm/nvidia-drm-crtc.c b/nvidia-drm/nvidia-drm-crtc.c
-index 81e71ea5..0bf50acb 100644
+index 18c09255..0e5112b3 100644
 --- a/nvidia-drm/nvidia-drm-crtc.c
 +++ b/nvidia-drm/nvidia-drm-crtc.c
-@@ -175,15 +175,15 @@ plane_req_config_update(struct drm_plane *plane,
-         old_config.dstHeight != req_config->config.dstHeight;
+@@ -226,15 +226,15 @@ static bool __is_async_flip_requested(const struct drm_plane *plane,
+     return false;
  }
  
 -#if defined(NV_DRM_PLANE_ATOMIC_CHECK_HAS_ATOMIC_STATE_ARG)
@@ -94,8 +94,8 @@ index 81e71ea5..0bf50acb 100644
      struct drm_plane_state *plane_state =
          drm_atomic_get_new_plane_state(state, plane);
  #endif
-@@ -379,15 +379,15 @@ static int head_modeset_config_attach_connector(
-  * the 'nv_drm_crtc_state::req_config', that is fine becase 'nv_drm_crtc_state'
+@@ -456,15 +456,15 @@ static int head_modeset_config_attach_connector(
+  * the 'nv_drm_crtc_state::req_config', that is fine because 'nv_drm_crtc_state'
   * will be discarded if ->atomic_check() fails.
   */
 -#if defined(NV_DRM_CRTC_ATOMIC_CHECK_HAS_ATOMIC_STATE_ARG)
@@ -114,10 +114,10 @@ index 81e71ea5..0bf50acb 100644
          drm_atomic_get_new_crtc_state(state, crtc);
  #endif
 diff --git a/nvidia-drm/nvidia-drm-helper.c b/nvidia-drm/nvidia-drm-helper.c
-index 47291c3a..d8f5f86f 100644
+index cc0134c1..282b4f48 100644
 --- a/nvidia-drm/nvidia-drm-helper.c
 +++ b/nvidia-drm/nvidia-drm-helper.c
-@@ -73,7 +73,7 @@ static void __nv_drm_framebuffer_put(struct drm_framebuffer *fb)
+@@ -75,7 +75,7 @@ static void __nv_drm_framebuffer_put(struct drm_framebuffer *fb)
   * nv_drm_for_each_crtc instead of drm_for_each_crtc to loop over all crtcs,
   * use nv_drm_for_each_new_*_in_state instead of for_each_connector_in_state to loop
   * over all modeset object states, and use drm_atomic_state_free() if
@@ -126,7 +126,7 @@ index 47291c3a..d8f5f86f 100644
   *
   * drm_atomic_helper_disable_all() is copied from
   *     linux/drivers/gpu/drm/drm_atomic_helper.c @
-@@ -108,7 +108,7 @@ static void __nv_drm_framebuffer_put(struct drm_framebuffer *fb)
+@@ -110,7 +110,7 @@ static void __nv_drm_framebuffer_put(struct drm_framebuffer *fb)
  int nv_drm_atomic_helper_disable_all(struct drm_device *dev,
                                       struct drm_modeset_acquire_ctx *ctx)
  {
@@ -135,7 +135,7 @@ index 47291c3a..d8f5f86f 100644
      struct drm_connector_state *conn_state;
      struct drm_connector *conn;
      struct drm_plane_state *plane_state;
-@@ -118,7 +118,7 @@ int nv_drm_atomic_helper_disable_all(struct drm_device *dev,
+@@ -120,7 +120,7 @@ int nv_drm_atomic_helper_disable_all(struct drm_device *dev,
      unsigned plane_mask = 0;
      int ret, i;
  
@@ -144,7 +144,7 @@ index 47291c3a..d8f5f86f 100644
      if (!state)
          return -ENOMEM;
  
-@@ -180,8 +180,8 @@ free:
+@@ -182,8 +182,8 @@ free:
         }
      }
  
@@ -155,7 +155,7 @@ index 47291c3a..d8f5f86f 100644
  #else
      if (ret != 0) {
          drm_atomic_state_free(state);
-@@ -196,6 +196,7 @@ free:
+@@ -198,6 +198,7 @@ free:
           */
      }
  #endif
@@ -164,7 +164,7 @@ index 47291c3a..d8f5f86f 100644
  }
  
 diff --git a/nvidia-drm/nvidia-drm-helper.h b/nvidia-drm/nvidia-drm-helper.h
-index f32f66a4..c047885e 100644
+index ad71ea84..fd1c343c 100644
 --- a/nvidia-drm/nvidia-drm-helper.h
 +++ b/nvidia-drm/nvidia-drm-helper.h
 @@ -156,6 +156,92 @@ nv_drm_prime_pages_to_sg(struct drm_device *dev,
@@ -261,7 +261,7 @@ index f32f66a4..c047885e 100644
                                       struct drm_modeset_acquire_ctx *ctx);
  
 diff --git a/nvidia-drm/nvidia-drm-modeset.c b/nvidia-drm/nvidia-drm-modeset.c
-index bfdc330f..4c2e9fe6 100644
+index a73f7937..208d8226 100644
 --- a/nvidia-drm/nvidia-drm-modeset.c
 +++ b/nvidia-drm/nvidia-drm-modeset.c
 @@ -44,21 +44,23 @@
@@ -313,7 +313,7 @@ index bfdc330f..4c2e9fe6 100644
      nv_drm_free(nv_state);
  }
  
-@@ -147,7 +149,7 @@ static bool __will_generate_flip_event(struct drm_crtc *crtc,
+@@ -170,7 +172,7 @@ static bool __will_generate_flip_event(struct drm_crtc *crtc,
   */
  static int
  nv_drm_atomic_apply_modeset_config(struct drm_device *dev,
@@ -322,7 +322,7 @@ index bfdc330f..4c2e9fe6 100644
                                     bool commit)
  {
      struct nv_drm_device *nv_dev = to_nv_device(dev);
-@@ -205,7 +207,7 @@ nv_drm_atomic_apply_modeset_config(struct drm_device *dev,
+@@ -229,7 +231,7 @@ nv_drm_atomic_apply_modeset_config(struct drm_device *dev,
  }
  
  int nv_drm_atomic_check(struct drm_device *dev,
@@ -331,7 +331,7 @@ index bfdc330f..4c2e9fe6 100644
  {
      int ret = 0;
  
-@@ -272,7 +274,7 @@ static void __nv_drm_handle_flip_event(struct nv_drm_crtc *nv_crtc)
+@@ -296,7 +298,7 @@ static void __nv_drm_handle_flip_event(struct nv_drm_crtc *nv_crtc)
  }
  
  int nv_drm_atomic_commit(struct drm_device *dev,
@@ -340,7 +340,7 @@ index bfdc330f..4c2e9fe6 100644
                           bool nonblock)
  {
      int ret = -EBUSY;
-@@ -447,7 +449,7 @@ int nv_drm_atomic_commit(struct drm_device *dev,
+@@ -471,7 +473,7 @@ int nv_drm_atomic_commit(struct drm_device *dev,
  
  done:
  
@@ -382,10 +382,10 @@ index 8cf25adf..67896d07 100644
  
  void nv_drm_handle_flip_occurred(struct nv_drm_device *nv_dev,
 diff --git a/nvidia-drm/nvidia-drm.Kbuild b/nvidia-drm/nvidia-drm.Kbuild
-index c51c5c9a..84100873 100644
+index dfaf3bba..c4994250 100644
 --- a/nvidia-drm/nvidia-drm.Kbuild
 +++ b/nvidia-drm/nvidia-drm.Kbuild
-@@ -119,3 +119,4 @@ NV_CONFTEST_TYPE_COMPILE_TESTS += drm_driver_has_date
+@@ -125,3 +125,4 @@ NV_CONFTEST_TYPE_COMPILE_TESTS += drm_driver_has_date
  NV_CONFTEST_TYPE_COMPILE_TESTS += file_operations_fop_unsigned_offset_present
  NV_CONFTEST_TYPE_COMPILE_TESTS += drm_connector_helper_funcs_mode_valid_has_const_mode_arg
  NV_CONFTEST_TYPE_COMPILE_TESTS += drm_fb_create_takes_format_info
