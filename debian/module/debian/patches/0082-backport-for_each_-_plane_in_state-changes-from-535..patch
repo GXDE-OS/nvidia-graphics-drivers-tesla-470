@@ -1,4 +1,4 @@
-From 704372f5cc9d5d0ce48b9da8645d5c07990e8358 Mon Sep 17 00:00:00 2001
+From da45e28c1d63e930213fba60d66eb6a80692709b Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Sat, 12 Sep 2026 03:31:36 +0200
 Subject: [PATCH] backport for_each_*_plane_in_state changes from 535.309.01
@@ -6,8 +6,8 @@ Subject: [PATCH] backport for_each_*_plane_in_state changes from 535.309.01
 ---
  nvidia-drm/nvidia-drm-helper.c  |  2 +-
  nvidia-drm/nvidia-drm-helper.h  | 16 ++++++++++++++++
- nvidia-drm/nvidia-drm-modeset.c |  7 +++++--
- 3 files changed, 22 insertions(+), 3 deletions(-)
+ nvidia-drm/nvidia-drm-modeset.c | 10 +++++++---
+ 3 files changed, 24 insertions(+), 4 deletions(-)
 
 diff --git a/nvidia-drm/nvidia-drm-helper.c b/nvidia-drm/nvidia-drm-helper.c
 index 4695840a..cc0134c1 100644
@@ -50,7 +50,7 @@ index b6823987..ad71ea84 100644
      uint32_t id)
  {
 diff --git a/nvidia-drm/nvidia-drm-modeset.c b/nvidia-drm/nvidia-drm-modeset.c
-index 8f0568c6..a73f7937 100644
+index 8beb6376..0b9d87f7 100644
 --- a/nvidia-drm/nvidia-drm-modeset.c
 +++ b/nvidia-drm/nvidia-drm-modeset.c
 @@ -105,8 +105,11 @@ static bool __will_generate_flip_event(struct drm_crtc *crtc,
@@ -67,6 +67,16 @@ index 8f0568c6..a73f7937 100644
          plane, old_plane_state, i) {
          if (old_plane_state->crtc != crtc) {
             continue;
+@@ -187,7 +190,8 @@ static int __nv_drm_get_syncpt_data(
+ 
+     head_reply_config = &reply_config->headReplyConfig[nv_crtc->head];
+ 
+-    nv_drm_for_each_plane_in_state(old_crtc_state->state, plane, old_plane_state, i) {
++    /* Use old state because this is only called after drm_atomic_helper_swap_state */
++    nv_drm_for_each_old_plane_in_state(old_crtc_state->state, plane, old_plane_state, i) {
+ 
+         if (plane->type == DRM_PLANE_TYPE_CURSOR || old_plane_state->crtc != crtc) {
+             continue;
 -- 
 2.39.5
 

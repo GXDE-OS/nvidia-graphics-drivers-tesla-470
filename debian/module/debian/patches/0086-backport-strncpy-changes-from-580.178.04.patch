@@ -1,4 +1,4 @@
-From 9051799f1d9e33765225cffc059d06009cd8eff4 Mon Sep 17 00:00:00 2001
+From 6837af723517c9352ec197cbfb04deedce5c76b2 Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Sun, 6 Sep 2026 22:11:07 +0200
 Subject: [PATCH] backport strncpy changes from 580.178.04
@@ -10,7 +10,7 @@ Subject: [PATCH] backport strncpy changes from 580.178.04
  3 files changed, 17 insertions(+), 1 deletion(-)
 
 diff --git a/nvidia-modeset/nvidia-modeset-linux.c b/nvidia-modeset/nvidia-modeset-linux.c
-index fca70b7f..ea991510 100644
+index 027e51bf..55214e35 100644
 --- a/nvidia-modeset/nvidia-modeset-linux.c
 +++ b/nvidia-modeset/nvidia-modeset-linux.c
 @@ -8,6 +8,7 @@
@@ -21,7 +21,7 @@ index fca70b7f..ea991510 100644
  #include <linux/module.h>
  #include <linux/kernel.h>
  #include <linux/slab.h>
-@@ -378,7 +379,11 @@ int nvkms_strcmp(const char *s1, const char *s2)
+@@ -389,7 +390,11 @@ int nvkms_strcmp(const char *s1, const char *s2)
  
  char* nvkms_strncpy(char *dest, const char *src, size_t n)
  {
@@ -34,10 +34,10 @@ index fca70b7f..ea991510 100644
  
  void nvkms_usleep(NvU64 usec)
 diff --git a/nvidia/linux_nvswitch.c b/nvidia/linux_nvswitch.c
-index 8d654596..73743772 100644
+index 6974085e..400e464e 100644
 --- a/nvidia/linux_nvswitch.c
 +++ b/nvidia/linux_nvswitch.c
-@@ -1931,7 +1931,7 @@ nvswitch_os_read_registry_dword
+@@ -2012,7 +2012,7 @@ nvswitch_os_read_registry_dword
          return -NVL_ERR_GENERIC;
      }
  
@@ -46,7 +46,7 @@ index 8d654596..73743772 100644
      regkey_val[regkey_val_len] = '\0';
  
      if (nvswitch_os_strtouint(regkey_val, data) != 0)
-@@ -2247,7 +2247,11 @@ nvswitch_os_strncpy
+@@ -2328,7 +2328,11 @@ nvswitch_os_strncpy
      NvLength length
  )
  {
@@ -59,10 +59,10 @@ index 8d654596..73743772 100644
  
  int
 diff --git a/nvidia/os-interface.c b/nvidia/os-interface.c
-index 7c979a26..73b96334 100644
+index 91911b62..799b5a14 100644
 --- a/nvidia/os-interface.c
 +++ b/nvidia/os-interface.c
-@@ -643,8 +643,15 @@ NvU32 NV_API_CALL os_get_current_process(void)
+@@ -645,8 +645,15 @@ NvU32 NV_API_CALL os_get_current_process(void)
  void NV_API_CALL os_get_current_process_name(char *buf, NvU32 len)
  {
      task_lock(current);

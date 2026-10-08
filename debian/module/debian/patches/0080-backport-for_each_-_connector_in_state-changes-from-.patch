@@ -1,4 +1,4 @@
-From 5329a0e2083b3472dde8b183bbec684154b479dc Mon Sep 17 00:00:00 2001
+From 0b10208272414826618ea09a38a7abde2c16010b Mon Sep 17 00:00:00 2001
 From: Andreas Beckmann <anbe@debian.org>
 Date: Sat, 12 Sep 2026 03:22:44 +0200
 Subject: [PATCH] backport for_each_*_connector_in_state changes from
@@ -11,10 +11,10 @@ Subject: [PATCH] backport for_each_*_connector_in_state changes from
  3 files changed, 11 insertions(+), 3 deletions(-)
 
 diff --git a/nvidia-drm/nvidia-drm-crtc.c b/nvidia-drm/nvidia-drm-crtc.c
-index d6dc14ac..2144d8a3 100644
+index 33bdef05..6d1f6d33 100644
 --- a/nvidia-drm/nvidia-drm-crtc.c
 +++ b/nvidia-drm/nvidia-drm-crtc.c
-@@ -491,7 +491,7 @@ static int nv_drm_crtc_atomic_check(struct drm_crtc *crtc,
+@@ -635,7 +635,7 @@ static int nv_drm_crtc_atomic_check(struct drm_crtc *crtc,
  
          req_config->flags.displaysChanged = NV_TRUE;
  
