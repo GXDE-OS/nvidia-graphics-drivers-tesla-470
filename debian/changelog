@@ -6,7 +6,7 @@ nvidia-graphics-drivers (470.256.02-10) UNRELEASED; urgency=medium
     dma_fence_signal changes from 535.309.01 to fix kernel module build for
     Linux 7.0.
 
- -- Andreas Beckmann <anbe@debian.org>  Thu, 08 Oct 2026 23:10:06 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 09 Oct 2026 21:50:10 +0200
 
 nvidia-graphics-drivers (470.256.02-9) UNRELEASED; urgency=medium
 
